@@ -37,6 +37,30 @@ def rot13_2(text, isEncrypt):
         ans += alphabet[alphIndex]
     return ans
 
+'''
+file_handle1=open('gogogo.pdf','rb+')
+file_handle2=open('new.pdf','wb')
+
+lines = file_handle1.readlines()
+for line in lines:
+    for i in line:
+        if 64 < i < 91:
+            i += 13
+            if i > 90:
+                i -= 26
+        elif 96 < i < 123:
+            i += 13
+            if i > 122:
+                i -= 26
+        i = i.to_bytes(1, 'little')
+        file_handle2.write(i)
+print('done')
+'''
+
+file_handle1.close()
+file_handle2.close()
+
+
 
 plaintext = "ABCabc"
 
